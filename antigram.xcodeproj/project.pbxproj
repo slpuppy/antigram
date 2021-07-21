@@ -13,6 +13,9 @@
 		75AA3DF526A845BD00F6F74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3DF326A845BD00F6F74C /* Main.storyboard */; };
 		75AA3DF726A845C300F6F74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3DF626A845C300F6F74C /* Assets.xcassets */; };
 		75AA3DFA26A845C300F6F74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3DF826A845C300F6F74C /* LaunchScreen.storyboard */; };
+		75AA3E0226A8526700F6F74C /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3E0126A8526700F6F74C /* FeedTableViewCell.xib */; };
+		75AA3E0426A8677F00F6F74C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3E0326A8677F00F6F74C /* Home.storyboard */; };
+		75AA3E0826A881AD00F6F74C /* StoriesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3E0726A881AD00F6F74C /* StoriesViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		75AA3DF626A845C300F6F74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75AA3DF926A845C300F6F74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75AA3DFB26A845C300F6F74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75AA3E0126A8526700F6F74C /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		75AA3E0326A8677F00F6F74C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		75AA3E0726A881AD00F6F74C /* StoriesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */,
 				75AA3DF126A845BD00F6F74C /* ViewController.swift */,
 				75AA3DF326A845BD00F6F74C /* Main.storyboard */,
+				75AA3E0326A8677F00F6F74C /* Home.storyboard */,
+				75AA3E0126A8526700F6F74C /* FeedTableViewCell.xib */,
+				75AA3E0726A881AD00F6F74C /* StoriesViewCell.xib */,
 				75AA3DF626A845C300F6F74C /* Assets.xcassets */,
 				75AA3DF826A845C300F6F74C /* LaunchScreen.storyboard */,
 				75AA3DFB26A845C300F6F74C /* Info.plist */,
@@ -125,6 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AA3DFA26A845C300F6F74C /* LaunchScreen.storyboard in Resources */,
+				75AA3E0426A8677F00F6F74C /* Home.storyboard in Resources */,
+				75AA3E0826A881AD00F6F74C /* StoriesViewCell.xib in Resources */,
+				75AA3E0226A8526700F6F74C /* FeedTableViewCell.xib in Resources */,
 				75AA3DF726A845C300F6F74C /* Assets.xcassets in Resources */,
 				75AA3DF526A845BD00F6F74C /* Main.storyboard in Resources */,
 			);
