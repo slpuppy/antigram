@@ -28,6 +28,15 @@ class FeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func commentDidPress(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
+    
+    
     func setup(item: FeedItem) {
         
         profilePictureImageView.image = UIImage(named: item.profilePictureImageName)

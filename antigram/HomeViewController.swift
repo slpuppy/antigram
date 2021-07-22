@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView!
     
+    
     let feed = [FeedItem(
                     profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "someone", postLocation: "somewhere", comment: "please don't comment on this photo", postDate: "Someday", postLiked: false),
                 FeedItem(
@@ -53,6 +54,7 @@ extension HomeViewController: UITableViewDataSource {
         return cell
         
     }
+    
     
   
 }

@@ -101,6 +101,9 @@
                         <state key="normal" image="bubble.right" catalog="system">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                         </state>
+                        <connections>
+                            <action selector="commentDidPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JDJ-FY-EjB"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s27-vy-G5I">
                         <rect key="frame" x="332.33333333333331" y="476" width="27" height="27"/>
@@ -113,6 +116,9 @@
                             <imageReference key="image" image="heart" catalog="system" symbolScale="default"/>
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                         </state>
+                        <connections>
+                            <action selector="didPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ASs-iC-jqI"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkC-tV-Kha">
                         <rect key="frame" x="192.33333333333334" y="476" width="124.33333333333334" height="18"/>
