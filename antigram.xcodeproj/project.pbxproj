@@ -11,6 +11,8 @@
 		7531996726A8E4B700B10CC9 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */; };
 		7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */; };
 		7531996F26A8F1A400B10CC9 /* StorieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531996E26A8F1A400B10CC9 /* StorieItem.swift */; };
+		754F189F26A9A46100B693D0 /* AlertOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F189E26A9A46100B693D0 /* AlertOptions.swift */; };
+		754F18A126A9A5BB00B693D0 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18A026A9A5BB00B693D0 /* Alertable.swift */; };
 		75AA3DEE26A845BD00F6F74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DED26A845BD00F6F74C /* AppDelegate.swift */; };
 		75AA3DF026A845BD00F6F74C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */; };
 		75AA3DF226A845BD00F6F74C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DF126A845BD00F6F74C /* HomeViewController.swift */; };
@@ -27,6 +29,8 @@
 		7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		7531996E26A8F1A400B10CC9 /* StorieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorieItem.swift; sourceTree = "<group>"; };
+		754F189E26A9A46100B693D0 /* AlertOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOptions.swift; sourceTree = "<group>"; };
+		754F18A026A9A5BB00B693D0 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		75AA3DEA26A845BD00F6F74C /* antigram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = antigram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AA3DED26A845BD00F6F74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		754F18A226A9A63200B693D0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				754F18A026A9A5BB00B693D0 /* Alertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		75AA3DE126A845BD00F6F74C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 		75AA3DEC26A845BD00F6F74C /* antigram */ = {
 			isa = PBXGroup;
 			children = (
+				754F18A226A9A63200B693D0 /* Protocols */,
 				75AA3E1326A8DA6700F6F74C /* Models */,
 				75AA3E0C26A8D88300F6F74C /* Views */,
 				75AA3DED26A845BD00F6F74C /* AppDelegate.swift */,
@@ -124,6 +137,7 @@
 			children = (
 				75AA3E1426A8DA7C00F6F74C /* FeedItem.swift */,
 				7531996E26A8F1A400B10CC9 /* StorieItem.swift */,
+				754F189E26A9A46100B693D0 /* AlertOptions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,8 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7531996F26A8F1A400B10CC9 /* StorieItem.swift in Sources */,
+				754F189F26A9A46100B693D0 /* AlertOptions.swift in Sources */,
 				75AA3DF226A845BD00F6F74C /* HomeViewController.swift in Sources */,
 				75AA3E1226A8D92100F6F74C /* FeedTableViewCell.swift in Sources */,
+				754F18A126A9A5BB00B693D0 /* Alertable.swift in Sources */,
 				75AA3E1526A8DA7C00F6F74C /* FeedItem.swift in Sources */,
 				7531996626A8E4B700B10CC9 /* StoriesCollectionViewCell.swift in Sources */,
 				75AA3E0B26A8C69700F6F74C /* LogButtonViewController.swift in Sources */,

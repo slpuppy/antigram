@@ -7,17 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Alertable {
     
     @IBOutlet weak var feedTableView: UITableView!
+    
+    var refreshControl: UIRefreshControl!
+    var refreshEvent = 0
+    var inboxEvent = 0
+   
+    @IBOutlet weak var inboxButton: UIButton!
+    
     
     
     let feed = [FeedItem(
                     profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "someone", postLocation: "somewhere", comment: "please don't comment on this photo", postDate: "Someday", postLiked: false),
                 FeedItem(
-                                profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "random brand", postLocation: "somewhere else", comment: "some ramdom quote", postDate: "Another day", postLiked: false),
+                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "random brand", postLocation: "somewhere else", comment: "some ramdom quote", postDate: "Another day", postLiked: false),
                 FeedItem(
-                                profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "some user", postLocation: "someplace", comment: "i gotta get out of here", postDate: "Someday", postLiked: false)
+                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "some user", postLocation: "someplace", comment: "i can't get out of here", postDate: "Long time ago", postLiked: false)
     ]
     
     let stories = [StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
@@ -31,30 +38,130 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         feedTableView.dataSource = self
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedTableViewCell")
-        // Do any additional setup after loading the view.
+        refreshControl = UIRefreshControl()
+        feedTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshControlTrigger(_:)), for: .valueChanged)
+        inboxButton.tintColor = UIColor.black
+    }
+    
+    @IBAction func cameraDidPress(_ sender: UIButton) {
+        
+        self.presentAlert(options: AlertOptions(title: "Something went wrong",
+                                                message: "It looks like you've already reached your limit of 01 post per account.",
+                                                actions: [AlertActionOption(title: "Cancel"),
+                                                          AlertActionOption(title: "Go back")]))
+        
+    }
+    
+    @IBAction func inboxDidPress(_ sender: UIButton) {
+    
+        switch self.inboxEvent {
+        
+        case 0:
+            self.presentAlert(options: AlertOptions(title: "Not important DM's", message: "Ok I'll help you a little bit and remove this annoying red dot, but don't click here again ok?", actions: [
+                                                        AlertActionOption(title: "Don't need help", style: .destructive),
+                                                        AlertActionOption(title: "Thanks", style: .default, handler: { _ in
+                                                                          
+                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxEvent += 1
+                                                                      })]))
+        case 1:
+            self.presentAlert(options: AlertOptions(title: "I'm trying to help you!", message: "Looks like my help wasn't enought for you to keep your finger out of here, let's try again.", actions: [
+                                                        AlertActionOption(title: "Ok", style: .default),
+                                                        AlertActionOption(title: "Try what?", style: .destructive, handler: { _ in
+                                                            
+                                                            self.inboxButton.tintColor = UIColor.lightGray
+                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxEvent += 1
+                                                                      })]))
+        case 2:
+            self.presentAlert(options: AlertOptions(title: "You're tapping a disabled button!", message: "Please consider never tapping this button again.", actions: [
+                                                        AlertActionOption(title: "Won't press it again", style: .default),
+                                                        AlertActionOption(title: "Dare me", style: .destructive, handler: { _ in
+                                                            self.inboxButton.tintColor = UIColor.white
+                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxEvent += 1
+                                                                      })]))
+        default:
+            self.presentAlert(options: AlertOptions(title: "You are having allucinations!", message: "Please deactivate your account now", actions: [
+                                                        AlertActionOption(title: "No.", style: .destructive),
+                                                        AlertActionOption(title: "Go to settings", style: .default, handler: { _ in
+                                                           
+                                                            // func pra ir pra tela de settings
+                                                           
+                                                                      })]))
+      }
+ }
+    
+    
+    
+    @objc func refreshControlTrigger(_ sender: Any) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+           switch self.refreshEvent {
+            case 0:
+                self.refreshControl.endRefreshing()
+                self.refreshEvent += 1
+                self.presentAlert(options: AlertOptions(
+                                    title: "Stop Refreshing!",
+                                    message: "Refreshing is a highly addictive behaviour and may cause health issues.",
+                                    actions: [AlertActionOption(title: "Let me refresh", style: .destructive),
+                                              AlertActionOption(title: "Ok")]))
+                
+            case 1:
+                self.refreshControl.endRefreshing()
+                self.refreshEvent += 1
+                self.presentAlert(options: AlertOptions(
+                                    title: "Refresh addiction warning!",
+                                    message: "You're becoming an addict, if the symptoms persist please take a break from the app.",
+                                    actions: [AlertActionOption(title: "Keep using", style: .destructive),
+                                              AlertActionOption(title: "OK")]))
+            case 2:
+                self.refreshControl.endRefreshing()
+                self.refreshEvent += 1
+                self.presentAlert(options: AlertOptions(
+                                    title: "You've become addicted to refreshing!",
+                                    message: "Maybe you should deactivate your account for a while.",
+                                    actions: [AlertActionOption(title: "Nope, I'm OK", style: .destructive),
+                                              AlertActionOption(title: "I'll consider it")]))
+            default:
+                self.refreshControl.endRefreshing()
+                self.presentAlert(options: AlertOptions(
+                                    title: "You are addicted to refreshing!",
+                                    message: "Delete or deactivate your account for a while.",
+                                    actions: [AlertActionOption(title: "Keep Using", style: .destructive),
+                                              AlertActionOption(title: "Go to settings", handler: { _ in
+                                             
+                                                // func pra ir pra tela de settings
+                                               
+                                                          })]))
+                
+            }
+            
+        }
+        
     }
     
     
 }
 
 extension HomeViewController: UITableViewDataSource {
-   
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         feed.count
     }
-   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedTableViewCell") as? FeedTableViewCell else {
             
             fatalError()
-       }
+        }
         
         cell.setup(item: feed[indexPath.row])
-       
+        cell.alertable = self
+        
         return cell
         
     }
     
     
-  
+    
 }

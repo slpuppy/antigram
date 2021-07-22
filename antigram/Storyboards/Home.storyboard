@@ -19,25 +19,32 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC6-FN-BD1">
                                 <rect key="frame" x="30" y="64" width="28" height="22"/>
                                 <state key="normal" image="photoicon"/>
+                                <connections>
+                                    <action selector="cameraDidPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tqO-qD-dmR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epn-2g-MLX">
                                 <rect key="frame" x="350" y="62" width="34" height="29"/>
                                 <state key="normal" image="notitray"/>
+                                <connections>
+                                    <action selector="inboxDidPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="03Y-Jj-84e"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ANTIGRAMtoplogoblack" translatesAutoresizingMaskIntoConstraints="NO" id="rez-B9-9f8">
-                                <rect key="frame" x="163" y="69" width="82" height="17"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-NX-XrW">
                                 <rect key="frame" x="0.0" y="111" width="414" height="751"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ANTIGRAMtoplogoblack" translatesAutoresizingMaskIntoConstraints="NO" id="rez-B9-9f8">
+                                <rect key="frame" x="163" y="69" width="82" height="17"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="epn-2g-MLX" secondAttribute="trailing" constant="30" id="2Ew-TE-SxY"/>
+                            <constraint firstItem="rez-B9-9f8" firstAttribute="leading" secondItem="yC6-FN-BD1" secondAttribute="trailing" constant="105" id="2JS-71-bbD"/>
+                            <constraint firstItem="epn-2g-MLX" firstAttribute="leading" secondItem="rez-B9-9f8" secondAttribute="trailing" constant="105" id="3Gw-Gw-vIo"/>
                             <constraint firstItem="yC6-FN-BD1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="53p-xw-Ro5"/>
-                            <constraint firstItem="rez-B9-9f8" firstAttribute="leading" relation="lessThanOrEqual" secondItem="yC6-FN-BD1" secondAttribute="trailing" constant="105" id="C7h-oI-So6"/>
                             <constraint firstItem="epn-2g-MLX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="18" id="COx-7M-6ks"/>
                             <constraint firstItem="yC6-FN-BD1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="FCG-SE-WEv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kla-NX-XrW" secondAttribute="trailing" id="MK9-Bv-3RE"/>
@@ -45,11 +52,12 @@
                             <constraint firstItem="Kla-NX-XrW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UHr-lQ-VMZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Kla-NX-XrW" secondAttribute="bottom" id="cgJ-9f-RE9"/>
                             <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="epn-2g-MLX" secondAttribute="bottom" constant="20" id="d0y-Tg-zkx"/>
-                            <constraint firstItem="epn-2g-MLX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="rez-B9-9f8" secondAttribute="trailing" constant="105" id="oO4-oc-v1a"/>
+                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="yC6-FN-BD1" secondAttribute="bottom" constant="25" id="hHn-GW-6B4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="feedTableView" destination="Kla-NX-XrW" id="AWP-OH-5mO"/>
+                        <outlet property="inboxButton" destination="epn-2g-MLX" id="t9f-BY-KNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -30,6 +30,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" image="ellipsis" catalog="system"/>
+                        <connections>
+                            <action selector="optionsDidPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tbY-Wj-rmJ"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="someone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBl-ro-GNE">
                         <rect key="frame" x="50" y="10" width="58" height="16"/>
@@ -102,7 +105,7 @@
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                         </state>
                         <connections>
-                            <action selector="commentDidPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JDJ-FY-EjB"/>
+                            <action selector="commentDidPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j8b-XB-aAs"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s27-vy-G5I">
@@ -117,7 +120,7 @@
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                         </state>
                         <connections>
-                            <action selector="didPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ASs-iC-jqI"/>
+                            <action selector="likeDidPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TTq-jC-UU8"/>
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkC-tV-Kha">
@@ -186,6 +189,7 @@
                 <outlet property="commentLabel" destination="xnd-aQ-Kqf" id="hWS-6U-IhT"/>
                 <outlet property="commentUsernameLabel" destination="DUp-Pr-kfa" id="VUT-EV-uwl"/>
                 <outlet property="headerUsernameLabel" destination="iBl-ro-GNE" id="3Kb-Oy-URC"/>
+                <outlet property="likeButton" destination="s27-vy-G5I" id="HbP-Gl-UXa"/>
                 <outlet property="locationLabel" destination="DB9-tZ-f7O" id="Kp2-zl-ZxX"/>
                 <outlet property="mainPictureImageView" destination="eKu-zC-tfR" id="LeO-DR-U9y"/>
                 <outlet property="postDateLabel" destination="qP7-bU-0Fu" id="VHs-Ju-2Nm"/>
