@@ -40,6 +40,8 @@ class HomeViewController: UIViewController, Alertable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        
         feedTableView.dataSource = self
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedTableViewCell")
         refreshControl = UIRefreshControl()

@@ -21,6 +21,7 @@ class ConfigViewController: UIViewController, Alertable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
        settingsTableView.dataSource = self
         settingsTableView.register(UINib(nibName: "SettingsViewCell", bundle: nil), forCellReuseIdentifier: "settingsTableViewCell")
 
