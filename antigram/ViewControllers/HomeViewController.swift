@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController, Alertable {
     
+    weak var coordinator: AppCoordinatorDelegate?
+    
     @IBOutlet weak var feedTableView: UITableView!
     
     var refreshControl: UIRefreshControl!
@@ -20,11 +22,13 @@ class HomeViewController: UIViewController, Alertable {
     
     
     let feed = [FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "someone", postLocation: "somewhere", comment: "please don't comment on this photo", postDate: "Someday", postLiked: false),
+                    profilePictureImageName: "profilePicture", postPictureImageName: "you", username: "your account", postLocation: "top of the feed", comment: "What's antigram about?", postDate: "Just now", postLiked: false),
                 FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "random brand", postLocation: "somewhere else", comment: "some ramdom quote", postDate: "Another day", postLiked: false),
+                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "random user", postLocation: "somewhere", comment: "don't comment on the photos", postDate: "Someday", postLiked: false),
                 FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "some user", postLocation: "someplace", comment: "i can't get out of here", postDate: "Long time ago", postLiked: false)
+                    profilePictureImageName: "profilePicture", postPictureImageName: "product", username: "random brand", postLocation: "The market", comment: "We bought you, now you buy us!", postDate: "Another day", postLiked: false),
+                FeedItem(
+                    profilePictureImageName: "profilePicture", postPictureImageName: "yanabaya", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
     ]
     
     let stories = [StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
@@ -87,7 +91,7 @@ class HomeViewController: UIViewController, Alertable {
                                                         AlertActionOption(title: "No.", style: .destructive),
                                                         AlertActionOption(title: "Go to settings", style: .default, handler: { _ in
                                                            
-                                                            // func pra ir pra tela de settings
+                                                            self.coordinator?.presentSettings()
                                                            
                                                                       })]))
       }
@@ -131,7 +135,7 @@ class HomeViewController: UIViewController, Alertable {
                                     actions: [AlertActionOption(title: "Keep Using", style: .destructive),
                                               AlertActionOption(title: "Go to settings", handler: { _ in
                                              
-                                                // func pra ir pra tela de settings
+                                                self.coordinator?.presentSettings()
                                                
                                                           })]))
                 
@@ -148,6 +152,8 @@ extension HomeViewController: UITableViewDataSource {
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         feed.count
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedTableViewCell") as? FeedTableViewCell else {

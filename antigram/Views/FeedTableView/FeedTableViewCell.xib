@@ -35,7 +35,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="someone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBl-ro-GNE">
-                        <rect key="frame" x="50" y="10" width="58" height="16"/>
+                        <rect key="frame" x="50" y="10" width="61" height="16"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -158,6 +158,7 @@
                     <constraint firstItem="eKu-zC-tfR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Da3-cP-nMl"/>
                     <constraint firstItem="JGh-jr-i4N" firstAttribute="leading" secondItem="qJy-Hw-il4" secondAttribute="trailing" constant="10" id="EvA-Eq-llZ"/>
                     <constraint firstItem="s27-vy-G5I" firstAttribute="leading" secondItem="NkC-tV-Kha" secondAttribute="trailing" constant="15.666666666666686" id="FIZ-DR-Eb2"/>
+                    <constraint firstItem="lZa-WU-2wK" firstAttribute="leading" secondItem="iBl-ro-GNE" secondAttribute="trailing" constant="10" id="Gh6-lY-VA6"/>
                     <constraint firstAttribute="top" secondItem="9db-QP-VTV" secondAttribute="top" constant="-10" id="Gu6-4l-YIa"/>
                     <constraint firstItem="qP7-bU-0Fu" firstAttribute="top" secondItem="DUp-Pr-kfa" secondAttribute="bottom" constant="5" id="IhT-E6-Hqa"/>
                     <constraint firstItem="NeO-8r-cce" firstAttribute="leading" secondItem="lZa-WU-2wK" secondAttribute="trailing" constant="10" id="JM8-dg-uvr"/>

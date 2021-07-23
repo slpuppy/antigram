@@ -64,7 +64,7 @@ class FeedTableViewCell: UITableViewCell {
             
             alertable?.presentAlert(options: AlertOptions(
                                         title: "Did you REALLY liked it?",
-                                        message: "Do you even know why you've been tapping this heart all this time?",
+                                        message: "Do you even know why you've been tapping hearts this time?",
                                         actions: [
                                             AlertActionOption(title: "Don't like"),
                                             AlertActionOption(title: "Whatever",style: .destructive, handler: { _ in

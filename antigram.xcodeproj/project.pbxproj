@@ -13,13 +13,19 @@
 		7531996F26A8F1A400B10CC9 /* StorieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531996E26A8F1A400B10CC9 /* StorieItem.swift */; };
 		754F189F26A9A46100B693D0 /* AlertOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F189E26A9A46100B693D0 /* AlertOptions.swift */; };
 		754F18A126A9A5BB00B693D0 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18A026A9A5BB00B693D0 /* Alertable.swift */; };
+		754F18AE26AA099700B693D0 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18AC26AA099700B693D0 /* SettingsViewCell.swift */; };
+		754F18AF26AA099700B693D0 /* SettingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754F18AD26AA099700B693D0 /* SettingsViewCell.xib */; };
+		754F18B126AA0B2000B693D0 /* Config.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754F18B026AA0B2000B693D0 /* Config.storyboard */; };
+		754F18B326AA0B4100B693D0 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18B226AA0B4100B693D0 /* ConfigViewController.swift */; };
+		754F18B526AA0C7000B693D0 /* ConfigItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18B426AA0C7000B693D0 /* ConfigItem.swift */; };
+		754F18B726AA1A6200B693D0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F18B626AA1A6200B693D0 /* AppCoordinator.swift */; };
 		75AA3DEE26A845BD00F6F74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DED26A845BD00F6F74C /* AppDelegate.swift */; };
 		75AA3DF026A845BD00F6F74C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */; };
 		75AA3DF226A845BD00F6F74C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3DF126A845BD00F6F74C /* HomeViewController.swift */; };
 		75AA3DF526A845BD00F6F74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3DF326A845BD00F6F74C /* Main.storyboard */; };
 		75AA3DF726A845C300F6F74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3DF626A845C300F6F74C /* Assets.xcassets */; };
 		75AA3E0426A8677F00F6F74C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA3E0326A8677F00F6F74C /* Home.storyboard */; };
-		75AA3E0B26A8C69700F6F74C /* LogButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3E0A26A8C69700F6F74C /* LogButtonViewController.swift */; };
+		75AA3E0B26A8C69700F6F74C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3E0A26A8C69700F6F74C /* LoginViewController.swift */; };
 		75AA3E1226A8D92100F6F74C /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3E1126A8D92100F6F74C /* FeedTableViewCell.swift */; };
 		75AA3E1526A8DA7C00F6F74C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA3E1426A8DA7C00F6F74C /* FeedItem.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +37,12 @@
 		7531996E26A8F1A400B10CC9 /* StorieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorieItem.swift; sourceTree = "<group>"; };
 		754F189E26A9A46100B693D0 /* AlertOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOptions.swift; sourceTree = "<group>"; };
 		754F18A026A9A5BB00B693D0 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		754F18AC26AA099700B693D0 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		754F18AD26AA099700B693D0 /* SettingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewCell.xib; sourceTree = "<group>"; };
+		754F18B026AA0B2000B693D0 /* Config.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Config.storyboard; sourceTree = "<group>"; };
+		754F18B226AA0B4100B693D0 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		754F18B426AA0C7000B693D0 /* ConfigItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigItem.swift; sourceTree = "<group>"; };
+		754F18B626AA1A6200B693D0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		75AA3DEA26A845BD00F6F74C /* antigram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = antigram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AA3DED26A845BD00F6F74C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +51,7 @@
 		75AA3DF626A845C300F6F74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75AA3DFB26A845C300F6F74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75AA3E0326A8677F00F6F74C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		75AA3E0A26A8C69700F6F74C /* LogButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogButtonViewController.swift; sourceTree = "<group>"; };
+		75AA3E0A26A8C69700F6F74C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75AA3E1126A8D92100F6F74C /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		75AA3E1426A8DA7C00F6F74C /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +75,19 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		754F18A526AA06BE00B693D0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75AA3E1126A8D92100F6F74C /* FeedTableViewCell.swift */,
+				7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */,
+				75AA3E0A26A8C69700F6F74C /* LoginViewController.swift */,
+				754F18B226AA0B4100B693D0 /* ConfigViewController.swift */,
+				75AA3DF126A845BD00F6F74C /* HomeViewController.swift */,
+				754F18AC26AA099700B693D0 /* SettingsViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		75AA3DE126A845BD00F6F74C = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +107,13 @@
 		75AA3DEC26A845BD00F6F74C /* antigram */ = {
 			isa = PBXGroup;
 			children = (
+				754F18B626AA1A6200B693D0 /* AppCoordinator.swift */,
+				75AA3DED26A845BD00F6F74C /* AppDelegate.swift */,
+				75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */,
 				754F18A226A9A63200B693D0 /* Protocols */,
 				75AA3E1326A8DA6700F6F74C /* Models */,
 				75AA3E0C26A8D88300F6F74C /* Views */,
-				75AA3DED26A845BD00F6F74C /* AppDelegate.swift */,
-				75AA3DEF26A845BD00F6F74C /* SceneDelegate.swift */,
-				75AA3DF126A845BD00F6F74C /* HomeViewController.swift */,
-				75AA3E0A26A8C69700F6F74C /* LogButtonViewController.swift */,
-				75AA3E0926A8C55900F6F74C /* Storyboards */,
+				754F18A526AA06BE00B693D0 /* ViewControllers */,
 				75AA3DF626A845C300F6F74C /* Assets.xcassets */,
 				75AA3DFB26A845C300F6F74C /* Info.plist */,
 			);
@@ -101,6 +125,8 @@
 			children = (
 				75AA3DF326A845BD00F6F74C /* Main.storyboard */,
 				75AA3E0326A8677F00F6F74C /* Home.storyboard */,
+				754F18B026AA0B2000B693D0 /* Config.storyboard */,
+				754F18AD26AA099700B693D0 /* SettingsViewCell.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -108,6 +134,7 @@
 		75AA3E0C26A8D88300F6F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75AA3E0926A8C55900F6F74C /* Storyboards */,
 				75AA3E0E26A8D8AE00F6F74C /* StoriesCollectionView */,
 				75AA3E0D26A8D8A300F6F74C /* FeedTableView */,
 			);
@@ -118,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */,
-				75AA3E1126A8D92100F6F74C /* FeedTableViewCell.swift */,
 			);
 			path = FeedTableView;
 			sourceTree = "<group>";
@@ -126,7 +152,6 @@
 		75AA3E0E26A8D8AE00F6F74C /* StoriesCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */,
 				7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */,
 			);
 			path = StoriesCollectionView;
@@ -136,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				75AA3E1426A8DA7C00F6F74C /* FeedItem.swift */,
+				754F18B426AA0C7000B693D0 /* ConfigItem.swift */,
 				7531996E26A8F1A400B10CC9 /* StorieItem.swift */,
 				754F189E26A9A46100B693D0 /* AlertOptions.swift */,
 			);
@@ -202,7 +228,9 @@
 				7531996726A8E4B700B10CC9 /* StoriesCollectionViewCell.xib in Resources */,
 				75AA3E0426A8677F00F6F74C /* Home.storyboard in Resources */,
 				7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */,
+				754F18B126AA0B2000B693D0 /* Config.storyboard in Resources */,
 				75AA3DF726A845C300F6F74C /* Assets.xcassets in Resources */,
+				754F18AF26AA099700B693D0 /* SettingsViewCell.xib in Resources */,
 				75AA3DF526A845BD00F6F74C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,12 +244,16 @@
 			files = (
 				7531996F26A8F1A400B10CC9 /* StorieItem.swift in Sources */,
 				754F189F26A9A46100B693D0 /* AlertOptions.swift in Sources */,
+				754F18B326AA0B4100B693D0 /* ConfigViewController.swift in Sources */,
 				75AA3DF226A845BD00F6F74C /* HomeViewController.swift in Sources */,
 				75AA3E1226A8D92100F6F74C /* FeedTableViewCell.swift in Sources */,
+				754F18B526AA0C7000B693D0 /* ConfigItem.swift in Sources */,
+				754F18B726AA1A6200B693D0 /* AppCoordinator.swift in Sources */,
 				754F18A126A9A5BB00B693D0 /* Alertable.swift in Sources */,
 				75AA3E1526A8DA7C00F6F74C /* FeedItem.swift in Sources */,
+				754F18AE26AA099700B693D0 /* SettingsViewCell.swift in Sources */,
 				7531996626A8E4B700B10CC9 /* StoriesCollectionViewCell.swift in Sources */,
-				75AA3E0B26A8C69700F6F74C /* LogButtonViewController.swift in Sources */,
+				75AA3E0B26A8C69700F6F74C /* LoginViewController.swift in Sources */,
 				75AA3DEE26A845BD00F6F74C /* AppDelegate.swift in Sources */,
 				75AA3DF026A845BD00F6F74C /* SceneDelegate.swift in Sources */,
 			);

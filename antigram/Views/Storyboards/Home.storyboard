@@ -53,6 +53,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Kla-NX-XrW" secondAttribute="bottom" id="cgJ-9f-RE9"/>
                             <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="epn-2g-MLX" secondAttribute="bottom" constant="20" id="d0y-Tg-zkx"/>
                             <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="yC6-FN-BD1" secondAttribute="bottom" constant="25" id="hHn-GW-6B4"/>
+                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="rez-B9-9f8" secondAttribute="bottom" constant="25" id="vtn-zP-Sox"/>
                         </constraints>
                     </view>
                     <connections>
