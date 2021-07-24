@@ -11,11 +11,13 @@ class StorieItem {
     
     let profilePictureImageName: String
   let username: String
+    let storieText: String
    
     
-    init(profilePictureImageName: String, username: String) {
+    init(profilePictureImageName: String, username: String, storieText: String) {
           self.profilePictureImageName = profilePictureImageName
           self.username = username
+         self.storieText = storieText
          
       }
     

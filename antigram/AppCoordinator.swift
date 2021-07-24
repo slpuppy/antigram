@@ -18,6 +18,8 @@ protocol AppCoordinatorDelegate: AnyObject {
     
     func presentSettings()
     
+    func presentStorie(item: StorieItem)
+    
     func sync(state: AppCoordinatorState)
     
     
@@ -106,10 +108,33 @@ class AppCoordinator {
         return tabController
   }
     
+    func createStorieVC(item: StorieItem) -> UIViewController {
+        
+        let storyboard = UIStoryboard(name: "StorieView", bundle: nil)
+        guard let vc = storyboard.instantiateInitialViewController() as? StorieViewController else {
+            
+            fatalError()
+        }
+        vc.storieItem = item
+        return vc
+        
+    }
+    
 }
 
 
 extension AppCoordinator: AppCoordinatorDelegate {
+    
+    
+    func presentStorie(item: StorieItem) {
+        guard state != .storie else { return }
+        let storieVC = createStorieVC(item: item)
+        storieVC.modalPresentationStyle = .fullScreen
+        window?.rootViewController?.present(storieVC, animated: true, completion: nil)
+        
+    
+    }
+    
    
     func presentLogIn() {
         guard state != .login else { return }
@@ -181,6 +206,7 @@ enum AppCoordinatorState {
     case home
     case settings
     case ending
+    case storie
     
     var isTab: Bool {
         

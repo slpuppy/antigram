@@ -13,9 +13,13 @@ class HomeViewController: UIViewController, Alertable {
     
     @IBOutlet weak var feedTableView: UITableView!
     
+    @IBOutlet weak var storiesColletionView: UICollectionView!
+    
     var refreshControl: UIRefreshControl!
     var refreshEvent = 0
     var inboxEvent = 0
+    
+    
    
     @IBOutlet weak var inboxButton: UIButton!
     
@@ -31,11 +35,11 @@ class HomeViewController: UIViewController, Alertable {
                     profilePictureImageName: "profilePicture", postPictureImageName: "yanabaya", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
     ]
     
-    let stories = [StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
-                   StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
-                   StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
-                   StorieItem(profilePictureImageName: "profilePicture", username: "You?"),
-                   StorieItem(profilePictureImageName: "profilePicture", username: "You?")]
+    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 1"),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 2"),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 3"),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 4"),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 5")]
     
     
     override func viewDidLoad() {
@@ -44,6 +48,10 @@ class HomeViewController: UIViewController, Alertable {
         
         feedTableView.dataSource = self
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedTableViewCell")
+        storiesColletionView.delegate = self
+        storiesColletionView.dataSource = self
+        storiesColletionView.register(UINib(nibName: "StoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "storieCollectionViewCell")
+        
         refreshControl = UIRefreshControl()
         feedTableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshControlTrigger(_:)), for: .valueChanged)
@@ -148,8 +156,7 @@ class HomeViewController: UIViewController, Alertable {
                                                 self.coordinator?.presentSettings()
                                                
                                                           })]))
-                
-            }
+           }
             
         }
         
@@ -177,7 +184,37 @@ extension HomeViewController: UITableViewDataSource {
         return cell
         
     }
+}
+
+extension HomeViewController: UICollectionViewDataSource  {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        stories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "storieCollectionViewCell", for: indexPath) as? StoriesCollectionViewCell else {
+            
+            fatalError()
+        }
+        
+        cell.setup(item: stories[indexPath.item])
+        
+        
+        return cell
+    }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        coordinator?.presentStorie(item: stories[indexPath.item])
+        
+        
+}
     
     
 }

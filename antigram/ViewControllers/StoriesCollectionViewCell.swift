@@ -9,9 +9,24 @@ import UIKit
 
 class StoriesCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var username: UILabel!
+    
+ override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setup(item: StorieItem) {
+        
+        userImage.image = UIImage(named: item.profilePictureImageName)
+        
+        username.text = item.username
+        
+        
+        
+    }
+    
 
 }

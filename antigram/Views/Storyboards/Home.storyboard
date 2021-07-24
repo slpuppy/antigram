@@ -30,9 +30,24 @@
                                     <action selector="inboxDidPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="03Y-Jj-84e"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-NX-XrW">
-                                <rect key="frame" x="0.0" y="111" width="414" height="751"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="100" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kla-NX-XrW">
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="m21-wD-Tnj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="PwI-W4-NVS"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="xAv-IO-05j">
+                                        <size key="itemSize" width="80" height="100"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <cells/>
+                                </collectionView>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ANTIGRAMtoplogoblack" translatesAutoresizingMaskIntoConstraints="NO" id="rez-B9-9f8">
                                 <rect key="frame" x="163" y="69" width="82" height="17"/>
@@ -50,20 +65,19 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kla-NX-XrW" secondAttribute="trailing" id="MK9-Bv-3RE"/>
                             <constraint firstItem="rez-B9-9f8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="NyP-3h-dUQ"/>
                             <constraint firstItem="Kla-NX-XrW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UHr-lQ-VMZ"/>
+                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="rez-B9-9f8" secondAttribute="bottom" constant="20" id="VVF-wq-4Eb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Kla-NX-XrW" secondAttribute="bottom" id="cgJ-9f-RE9"/>
-                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="epn-2g-MLX" secondAttribute="bottom" constant="20" id="d0y-Tg-zkx"/>
-                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="yC6-FN-BD1" secondAttribute="bottom" constant="25" id="hHn-GW-6B4"/>
-                            <constraint firstItem="Kla-NX-XrW" firstAttribute="top" secondItem="rez-B9-9f8" secondAttribute="bottom" constant="25" id="vtn-zP-Sox"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="feedTableView" destination="Kla-NX-XrW" id="AWP-OH-5mO"/>
                         <outlet property="inboxButton" destination="epn-2g-MLX" id="t9f-BY-KNR"/>
+                        <outlet property="storiesColletionView" destination="m21-wD-Tnj" id="ri8-aP-SrA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
