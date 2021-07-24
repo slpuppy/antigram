@@ -10,9 +10,11 @@ import UIKit
 class SettingsViewCell: UITableViewCell {
     
     weak var coordinator: AppCoordinatorDelegate?
+    
     weak var alertable: Alertable?
 
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var buttonLabel: UILabel!
+    
     
     @IBOutlet weak var buttonImage: UIImageView!
     
@@ -42,7 +44,7 @@ class SettingsViewCell: UITableViewCell {
     
     func setup(item: ConfigItem) {
         
-        deleteButton.setTitle(item.buttonLabel, for: .normal)
+        buttonLabel.text = item.buttonLabel
         buttonImage.image = UIImage(systemName: item.imageName)
         
     }

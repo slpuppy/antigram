@@ -16,33 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bRK-GD-OHx">
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bRK-GD-OHx">
                         <rect key="frame" x="20" y="14" width="24" height="24.5"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bRK-GD-OHx" secondAttribute="height" multiplier="1:1" id="nnC-Wh-HZc"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xao-xg-b3J">
-                        <rect key="frame" x="54" y="0.0" width="246" height="54"/>
-                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" title="Delete account"/>
-                    </button>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWD-5R-Fqw">
+                        <rect key="frame" x="54" y="17" width="246" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Xao-xg-b3J" secondAttribute="bottom" id="hAh-pC-Etn"/>
-                    <constraint firstItem="Xao-xg-b3J" firstAttribute="leading" secondItem="bRK-GD-OHx" secondAttribute="trailing" constant="10" id="ii3-Ce-E0n"/>
-                    <constraint firstAttribute="trailing" secondItem="Xao-xg-b3J" secondAttribute="trailing" constant="20" id="kz8-Ce-YNF"/>
+                    <constraint firstAttribute="bottom" secondItem="EWD-5R-Fqw" secondAttribute="bottom" constant="16" id="9OD-TF-iaN"/>
+                    <constraint firstItem="EWD-5R-Fqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="fKo-p2-Mhs"/>
+                    <constraint firstAttribute="trailing" secondItem="EWD-5R-Fqw" secondAttribute="trailing" constant="20" id="g7m-13-KRw"/>
                     <constraint firstItem="bRK-GD-OHx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lm8-3H-Zg2"/>
+                    <constraint firstItem="EWD-5R-Fqw" firstAttribute="leading" secondItem="bRK-GD-OHx" secondAttribute="trailing" constant="10" id="rDo-sU-YPB"/>
                     <constraint firstAttribute="bottom" secondItem="bRK-GD-OHx" secondAttribute="bottom" constant="15" id="ssK-8t-DH5"/>
-                    <constraint firstItem="Xao-xg-b3J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yl3-3K-ot1"/>
                     <constraint firstItem="bRK-GD-OHx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="zXs-VO-zda"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="buttonImage" destination="bRK-GD-OHx" id="NAH-WV-j2w"/>
-                <outlet property="deleteButton" destination="Xao-xg-b3J" id="wZl-bL-mXi"/>
+                <outlet property="buttonLabel" destination="EWD-5R-Fqw" id="Yx4-06-eDk"/>
             </connections>
             <point key="canvasLocation" x="31.884057971014496" y="135.26785714285714"/>
         </tableViewCell>

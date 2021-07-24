@@ -50,6 +50,14 @@ class HomeViewController: UIViewController, Alertable {
         inboxButton.tintColor = UIColor.black
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+         
+        
+        self.coordinator?.sync(state: .home)
+    
+    }
+    
     @IBAction func cameraDidPress(_ sender: UIButton) {
         
         self.presentAlert(options: AlertOptions(title: "Something went wrong",

@@ -14,7 +14,12 @@ protocol AppCoordinatorDelegate: AnyObject {
     
     func presentHome()
     
+    func presentEnding()
+    
     func presentSettings()
+    
+    func sync(state: AppCoordinatorState)
+    
     
 }
 
@@ -29,6 +34,16 @@ class AppCoordinator {
         
     }
     
+    
+    
+    func sync(state: AppCoordinatorState) {
+        
+        self.state = state
+        
+    }
+    
+    
+    
     func start() {
         
         presentLogIn()
@@ -39,6 +54,19 @@ class AppCoordinator {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateInitialViewController() as? LoginViewController else {
+            
+            fatalError()
+        }
+        
+        vc.coordinator = self
+        return vc
+        
+      }
+    
+    func createEndingVC() -> UIViewController {
+        
+        let storyboard = UIStoryboard(name: "End", bundle: nil)
+        guard let vc = storyboard.instantiateInitialViewController() as? EndViewController else {
             
             fatalError()
         }
@@ -64,10 +92,17 @@ class AppCoordinator {
            fatalError()
         }
         configVC.coordinator = self
-        configVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
+        configVC.title = "Settings"
         
-        tabController.viewControllers = [homeVC, configVC]
+        configVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
+        let navVC = UINavigationController()
+        navVC.navigationBar.barTintColor = UIColor.white
+        
+        navVC.pushViewController(configVC, animated: false)
+        
+        tabController.viewControllers = [homeVC, navVC]
         tabController.tabBar.tintColor = .black
+        tabController.tabBar.barTintColor = UIColor.white
         return tabController
   }
     
@@ -80,29 +115,31 @@ extension AppCoordinator: AppCoordinatorDelegate {
         guard state != .login else { return }
         let loginVC = createLogInVC()
         window?.rootViewController = loginVC
+        state = .login
  }
     
     func presentHome() {
        
-        print("QUALQUER COISA 1")
+      
         guard state != .home else { return }
-        print("QUALQUER COISA DPS DO GUARD")
+       
         
         if let state = state, state.isTab {
             
-            print("QUALQUER COISA DENTRO DO IF LET")
+       
             guard let tabVC = window?.rootViewController as? UITabBarController else { return }
             
             tabVC.selectedIndex = 0
             
         } else {
             
-            print("QUALQUER COISA DENTRO DO ELSE")
+         
             let tabVC = createTabBarVC()
             window?.rootViewController = tabVC
             
         }
         
+        state = .home
     }
     
     func presentSettings() {
@@ -122,9 +159,20 @@ extension AppCoordinator: AppCoordinatorDelegate {
             tabVC.selectedIndex = 1
            
         }
+        state = .settings
     }
     
+    func presentEnding() {
+        
+        guard state != .ending else { return }
+        let endingVC = createEndingVC()
+        window?.rootViewController = endingVC
+        state = .ending
+ }
+    
 }
+
+
 
 
 enum AppCoordinatorState {
@@ -132,6 +180,7 @@ enum AppCoordinatorState {
     case login
     case home
     case settings
+    case ending
     
     var isTab: Bool {
         

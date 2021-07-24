@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7523EA8E26AC9ABC0062C49A /* End.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7523EA8D26AC9ABC0062C49A /* End.storyboard */; };
+		7523EA9026AC9AFB0062C49A /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523EA8F26AC9AFB0062C49A /* EndViewController.swift */; };
 		7531996626A8E4B700B10CC9 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */; };
 		7531996726A8E4B700B10CC9 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */; };
 		7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7523EA8D26AC9ABC0062C49A /* End.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = End.storyboard; sourceTree = "<group>"; };
+		7523EA8F26AC9AFB0062C49A /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				75AA3E1126A8D92100F6F74C /* FeedTableViewCell.swift */,
+				7523EA8F26AC9AFB0062C49A /* EndViewController.swift */,
 				7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */,
 				75AA3E0A26A8C69700F6F74C /* LoginViewController.swift */,
 				754F18B226AA0B4100B693D0 /* ConfigViewController.swift */,
@@ -123,6 +128,7 @@
 		75AA3E0926A8C55900F6F74C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				7523EA8D26AC9ABC0062C49A /* End.storyboard */,
 				75AA3DF326A845BD00F6F74C /* Main.storyboard */,
 				75AA3E0326A8677F00F6F74C /* Home.storyboard */,
 				754F18B026AA0B2000B693D0 /* Config.storyboard */,
@@ -230,6 +236,7 @@
 				7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */,
 				754F18B126AA0B2000B693D0 /* Config.storyboard in Resources */,
 				75AA3DF726A845C300F6F74C /* Assets.xcassets in Resources */,
+				7523EA8E26AC9ABC0062C49A /* End.storyboard in Resources */,
 				754F18AF26AA099700B693D0 /* SettingsViewCell.xib in Resources */,
 				75AA3DF526A845BD00F6F74C /* Main.storyboard in Resources */,
 			);
@@ -252,6 +259,7 @@
 				754F18A126A9A5BB00B693D0 /* Alertable.swift in Sources */,
 				75AA3E1526A8DA7C00F6F74C /* FeedItem.swift in Sources */,
 				754F18AE26AA099700B693D0 /* SettingsViewCell.swift in Sources */,
+				7523EA9026AC9AFB0062C49A /* EndViewController.swift in Sources */,
 				7531996626A8E4B700B10CC9 /* StoriesCollectionViewCell.swift in Sources */,
 				75AA3E0B26A8C69700F6F74C /* LoginViewController.swift in Sources */,
 				75AA3DEE26A845BD00F6F74C /* AppDelegate.swift in Sources */,
