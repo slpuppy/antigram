@@ -15,10 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storie text here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pL-bn-uEv">
-                                <rect key="frame" x="20" y="64" width="374" height="778"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pL-bn-uEv">
+                                <rect key="frame" x="30" y="64" width="354" height="778"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Storie text here">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="13" name="SFPro-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQZ-Hz-m57">
@@ -37,11 +45,11 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RQZ-Hz-m57" secondAttribute="trailing" constant="30" id="3JJ-jH-RrW"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8pL-bn-uEv" secondAttribute="trailing" constant="20" id="5e2-ED-qLx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8pL-bn-uEv" secondAttribute="trailing" constant="30" id="5e2-ED-qLx"/>
                             <constraint firstItem="RQZ-Hz-m57" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="40" id="GNp-AL-S6a"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8pL-bn-uEv" secondAttribute="bottom" constant="20" id="dOE-jN-qmv"/>
                             <constraint firstItem="8pL-bn-uEv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="kV3-SX-tYy"/>
-                            <constraint firstItem="8pL-bn-uEv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oEg-JG-4os"/>
+                            <constraint firstItem="8pL-bn-uEv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="oEg-JG-4os"/>
                         </constraints>
                     </view>
                     <connections>

@@ -35,11 +35,11 @@ class HomeViewController: UIViewController, Alertable {
                     profilePictureImageName: "profilePicture", postPictureImageName: "yanabaya", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
     ]
     
-    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 1"),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 2"),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 3"),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 4"),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "storie 5")]
+    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "Do you know who you are?"),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "some artist", storieText: "literally a black rectangle with a X in the up right corner."),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "that person", storieText: "you're only here to feed my ego."),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "some brand", storieText: "social media is a marketplace tha trades in humans."),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "antigramer", storieText: "storie 5")]
     
     
     override func viewDidLoad() {

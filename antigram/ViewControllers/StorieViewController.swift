@@ -16,6 +16,9 @@ class StorieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storieText.text = storieItem?.storieText
+        storieText.textColor = .white
+        
+        
 
         // Do any additional setup after loading the view.
     }
