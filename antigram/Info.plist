@@ -62,8 +62,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIUserInterfaceStyle</key>
-	<string></string>
 	<key>User Interface Style</key>
 	<string>Light</string>
 </dict>
