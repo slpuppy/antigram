@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 24antilogoultra.png",
+      "filename" : "post1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "post1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "post1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -16,32 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antilogo" translatesAutoresizingMaskIntoConstraints="NO" id="GMt-HK-u65">
-                                <rect key="frame" x="95" y="153.66666666666666" width="200" height="53.333333333333343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GMt-HK-u65" secondAttribute="height" multiplier="15:4" id="e5f-ET-I3m"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jPp-Ve-yuL"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fkv-zR-MX7">
                                 <rect key="frame" x="0.0" y="44.000000000000007" width="390" height="109.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yourphoto" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-Hp-Jzq">
-                                <rect key="frame" x="153.66666666666666" y="237" width="82.666666666666657" height="83"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="you" translatesAutoresizingMaskIntoConstraints="NO" id="d9B-Hp-Jzq">
+                                <rect key="frame" x="153.66666666666666" y="286.66666666666669" width="82.666666666666657" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d9B-Hp-Jzq" secondAttribute="height" multiplier="1:1" id="rU7-2C-yfd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXK-eQ-SWK">
-                                <rect key="frame" x="20" y="330" width="350" height="21"/>
+                                <rect key="frame" x="20" y="379.66666666666669" width="350" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3I-Y4-4sV">
-                                <rect key="frame" x="40" y="391" width="310" height="50"/>
+                                <rect key="frame" x="40" y="440.66666666666669" width="310" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fXp-S6-9ij"/>
@@ -61,7 +53,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anti-social media story puzzle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EF-mE-dsX">
-                                <rect key="frame" x="30" y="481" width="330" height="17"/>
+                                <rect key="frame" x="30" y="530.66666666666663" width="330" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,19 +85,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antilogo" translatesAutoresizingMaskIntoConstraints="NO" id="GMt-HK-u65">
+                                <rect key="frame" x="100" y="173.66666666666666" width="190" height="92.999999999999972"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gpL-Xk-Qa7" secondAttribute="bottom" constant="50" id="14d-d7-GOL"/>
                             <constraint firstItem="gpL-Xk-Qa7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1ZY-0F-Iqp"/>
-                            <constraint firstItem="d9B-Hp-Jzq" firstAttribute="top" secondItem="GMt-HK-u65" secondAttribute="bottom" constant="30" id="396-hQ-M6c"/>
                             <constraint firstItem="D3I-Y4-4sV" firstAttribute="top" secondItem="BXK-eQ-SWK" secondAttribute="bottom" constant="40" id="4U2-ji-JVV"/>
                             <constraint firstItem="6EF-mE-dsX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5c3-x0-V8b"/>
                             <constraint firstItem="d9B-Hp-Jzq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BOr-Eh-jTh"/>
-                            <constraint firstItem="GMt-HK-u65" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="BeY-Uw-wy5"/>
                             <constraint firstItem="D3I-Y4-4sV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="DLH-x9-Eqe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GMt-HK-u65" secondAttribute="trailing" constant="200" id="Dng-KX-8no"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fkv-zR-MX7" secondAttribute="trailing" id="Ep2-re-1Nb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6EF-mE-dsX" secondAttribute="trailing" constant="30" id="GuI-wP-FJn"/>
                             <constraint firstItem="6EF-mE-dsX" firstAttribute="top" secondItem="D3I-Y4-4sV" secondAttribute="bottom" constant="40" id="HI2-KS-BHy"/>
@@ -113,13 +105,15 @@
                             <constraint firstItem="Fkv-zR-MX7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QVP-5Y-ABP"/>
                             <constraint firstItem="BXK-eQ-SWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Twa-6i-5pL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D3I-Y4-4sV" secondAttribute="trailing" constant="40" id="XmZ-yN-Olh"/>
+                            <constraint firstItem="GMt-HK-u65" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="ZpU-Zr-aTi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BXK-eQ-SWK" secondAttribute="trailing" constant="20" id="bgV-k1-C34"/>
-                            <constraint firstItem="GMt-HK-u65" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d71-WS-AnG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gpL-Xk-Qa7" secondAttribute="trailing" constant="20" id="ffc-wO-rlz"/>
+                            <constraint firstItem="d9B-Hp-Jzq" firstAttribute="top" secondItem="GMt-HK-u65" secondAttribute="bottom" constant="20" id="h9u-QK-5Aq"/>
                             <constraint firstItem="Fkv-zR-MX7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.13" id="kw1-Mw-u7V"/>
                             <constraint firstItem="BXK-eQ-SWK" firstAttribute="top" secondItem="d9B-Hp-Jzq" secondAttribute="bottom" constant="10" id="mgr-yi-0cf"/>
-                            <constraint firstItem="GMt-HK-u65" firstAttribute="top" secondItem="Fkv-zR-MX7" secondAttribute="bottom" id="nuU-xq-6dc"/>
                             <constraint firstItem="Fkv-zR-MX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oHM-QI-b1e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GMt-HK-u65" secondAttribute="trailing" constant="100" id="tdj-u5-mQF"/>
+                            <constraint firstItem="GMt-HK-u65" firstAttribute="top" secondItem="Fkv-zR-MX7" secondAttribute="bottom" constant="20" id="uzg-Mm-oAO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -129,12 +123,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="01o-RT-z3E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="138.46153846153845" y="123.69668246445497"/>
         </scene>
     </scenes>
     <resources>
-        <image name="antilogo" width="206" height="60"/>
-        <image name="yourphoto" width="89" height="92"/>
+        <image name="antilogo" width="572" height="93"/>
+        <image name="you" width="286" height="287"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
