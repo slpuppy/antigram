@@ -20,6 +20,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     var liked = false
+    var cliked = false
     
     override func awakeFromNib() {
         super.awakeFromNib()

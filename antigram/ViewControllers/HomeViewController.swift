@@ -35,11 +35,13 @@ class HomeViewController: UIViewController, Alertable {
                     profilePictureImageName: "profilePicture", postPictureImageName: "yanabaya", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
     ]
     
-    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "Do you know who you are?"),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "some artist", storieText: "literally a black rectangle with a X in the up right corner."),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "that person", storieText: "you're only here to feed my ego."),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "some brand", storieText: "social media is a marketplace tha trades in humans."),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "antigramer", storieText: "storie 5")]
+    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "Do you know who you are?" ,                                storieClicked: false),
+                   StorieItem(profilePictureImageName: "sthumb1", username: "some artist", storieText: "literally a black rectangle with a X in the up right corner.", storieClicked: false),
+                   StorieItem(profilePictureImageName: "sthumb2", username: "that person", storieText: "you're only here to feed my ego.", storieClicked: false),
+                   StorieItem(profilePictureImageName: "brandbuy", username: "some brand", storieText: "\("social media is a marketplace that trades in humans.")", storieClicked: false),
+                   StorieItem(profilePictureImageName: "sthumb3", username: "influncer", storieText: "People in a crowded party during a pandemic", storieClicked: false),
+                   StorieItem(profilePictureImageName: "storythumb1", username: "someone", storieText: "selfie", storieClicked: false),
+                   StorieItem(profilePictureImageName: "antigramer", username: "antigramer", storieText: "you are not you anymore.", storieClicked: false)]
     
     
     override func viewDidLoad() {
@@ -74,6 +76,9 @@ class HomeViewController: UIViewController, Alertable {
                                                           AlertActionOption(title: "Go back")]))
         
     }
+    
+    
+    
     
     @IBAction func inboxDidPress(_ sender: UIButton) {
     
@@ -210,6 +215,9 @@ extension HomeViewController: UICollectionViewDataSource  {
 extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    
+        
         
         coordinator?.presentStorie(item: stories[indexPath.item])
         

@@ -124,6 +124,10 @@ class AppCoordinator {
 
 
 extension AppCoordinator: AppCoordinatorDelegate {
+   
+    
+
+    
     
     
     func presentStorie(item: StorieItem) {
@@ -131,6 +135,7 @@ extension AppCoordinator: AppCoordinatorDelegate {
         let storieVC = createStorieVC(item: item)
         storieVC.modalPresentationStyle = .fullScreen
         window?.rootViewController?.present(storieVC, animated: true, completion: nil)
+        
         
     
     }

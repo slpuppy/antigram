@@ -25,7 +25,9 @@ class StorieViewController: UIViewController {
     
 
     @IBAction func didPress(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
+      
         
     }
     /*

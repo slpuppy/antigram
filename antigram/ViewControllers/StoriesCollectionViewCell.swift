@@ -13,12 +13,21 @@ class StoriesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var username: UILabel!
     
- override func awakeFromNib() {
+ 
+    
+    
+    
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
     
     func setup(item: StorieItem) {
+        
+        
         
         userImage.image = UIImage(named: item.profilePictureImageName)
         
