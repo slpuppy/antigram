@@ -11,6 +11,7 @@
 		7523EA9026AC9AFB0062C49A /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523EA8F26AC9AFB0062C49A /* EndViewController.swift */; };
 		7523EA9226ACC5840062C49A /* StorieView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7523EA9126ACC5840062C49A /* StorieView.storyboard */; };
 		7523EA9426ACC5DD0062C49A /* StorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523EA9326ACC5DD0062C49A /* StorieViewController.swift */; };
+		7523EA9626ACE8580062C49A /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7523EA9526ACE8580062C49A /* Launch.storyboard */; };
 		7531996626A8E4B700B10CC9 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */; };
 		7531996726A8E4B700B10CC9 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */; };
 		7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */; };
@@ -39,6 +40,7 @@
 		7523EA8F26AC9AFB0062C49A /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		7523EA9126ACC5840062C49A /* StorieView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StorieView.storyboard; sourceTree = "<group>"; };
 		7523EA9326ACC5DD0062C49A /* StorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorieViewController.swift; sourceTree = "<group>"; };
+		7523EA9526ACE8580062C49A /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		7531996426A8E4B700B10CC9 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7531996526A8E4B700B10CC9 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		7531996826A8E88600B10CC9 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				7523EA9126ACC5840062C49A /* StorieView.storyboard */,
 				754F18B026AA0B2000B693D0 /* Config.storyboard */,
 				754F18AD26AA099700B693D0 /* SettingsViewCell.xib */,
+				7523EA9526ACE8580062C49A /* Launch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7531996726A8E4B700B10CC9 /* StoriesCollectionViewCell.xib in Resources */,
+				7523EA9626ACE8580062C49A /* Launch.storyboard in Resources */,
 				75AA3E0426A8677F00F6F74C /* Home.storyboard in Resources */,
 				7531996926A8E88600B10CC9 /* FeedTableViewCell.xib in Resources */,
 				754F18B126AA0B2000B693D0 /* Config.storyboard in Resources */,
@@ -417,10 +421,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pupper.Antigram.antigram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pupper.Antigram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,10 +440,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pupper.Antigram.antigram;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pupper.Antigram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
