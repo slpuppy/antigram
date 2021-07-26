@@ -26,22 +26,22 @@ class HomeViewController: UIViewController, Alertable {
     
     
     let feed = [FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "you", username: "your account", postLocation: "top of the feed", comment: "What's antigram about?", postDate: "Just now", postLiked: false),
+                    profilePictureImageName: "profilePicture", postPictureImageName: "post4", username: "your account", postLocation: "top of the feed", comment: "What's antigram about?", postDate: "Just now", postLiked: false),
                 FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "post01", username: "random user", postLocation: "somewhere", comment: "don't comment on the photos", postDate: "Someday", postLiked: false),
+                    profilePictureImageName: "profilepic1", postPictureImageName: "post1", username: "random user", postLocation: "somewhere", comment: "don't comment on the photos", postDate: "Someday", postLiked: false),
                 FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "product", username: "random brand", postLocation: "The market", comment: "We bought you, now you buy us!", postDate: "Another day", postLiked: false),
+                    profilePictureImageName: "profilepic2", postPictureImageName: "post3", username: "random brand", postLocation: "The market", comment: "We bought you, now you buy us!", postDate: "Another day", postLiked: false),
                 FeedItem(
-                    profilePictureImageName: "profilePicture", postPictureImageName: "yanabaya", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
+                    profilePictureImageName: "antiprofile", postPictureImageName: "post2", username: "antigramer", postLocation: "from out of here", comment: "Time to start figuring out what to do", postDate: "Long time ago", postLiked: false)
     ]
     
-    let stories = [StorieItem(profilePictureImageName: "storythumb1", username: "You?", storieText: "Do you know who you are?" ,                                storieClicked: false),
-                   StorieItem(profilePictureImageName: "sthumb1", username: "some artist", storieText: "literally a black rectangle with a X in the up right corner.", storieClicked: false),
-                   StorieItem(profilePictureImageName: "sthumb2", username: "that person", storieText: "you're only here to feed my ego.", storieClicked: false),
-                   StorieItem(profilePictureImageName: "brandbuy", username: "some brand", storieText: "\("social media is a marketplace that trades in humans.")", storieClicked: false),
-                   StorieItem(profilePictureImageName: "sthumb3", username: "influncer", storieText: "People in a crowded party during a pandemic", storieClicked: false),
-                   StorieItem(profilePictureImageName: "storythumb1", username: "someone", storieText: "selfie", storieClicked: false),
-                   StorieItem(profilePictureImageName: "antigramer", username: "antigramer", storieText: "you are not you anymore.", storieClicked: false)]
+    let stories = [StorieItem(profilePictureImageName: "you", username: "You?", storieText: "Do you know who you are?" ,                                storieClicked: false),
+                   StorieItem(profilePictureImageName: "s1", username: "some artist", storieText: "literally a black rectangle with a X in the up right corner.", storieClicked: false),
+                   StorieItem(profilePictureImageName: "s6", username: "that person", storieText: "you're only here to feed my ego.", storieClicked: false),
+                   StorieItem(profilePictureImageName: "s4", username: "some brand", storieText: "\("social media is a marketplace that trades in humans.")", storieClicked: false),
+                   StorieItem(profilePictureImageName: "s7", username: "influncer", storieText: "People in a crowded party during a pandemic", storieClicked: false),
+                   StorieItem(profilePictureImageName: "s2", username: "someone", storieText: "selfie", storieClicked: false),
+                   StorieItem(profilePictureImageName: "s5", username: "antigramer", storieText: "you are not you anymore.", storieClicked: false)]
     
     
     override func viewDidLoad() {
@@ -89,7 +89,7 @@ class HomeViewController: UIViewController, Alertable {
                                                         AlertActionOption(title: "Don't need help", style: .destructive),
                                                         AlertActionOption(title: "Thanks", style: .default, handler: { _ in
                                                                           
-                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxButton.setImage(UIImage(named: "trayn"), for: .normal)
                                                             self.inboxEvent += 1
                                                                       })]))
         case 1:
@@ -97,8 +97,8 @@ class HomeViewController: UIViewController, Alertable {
                                                         AlertActionOption(title: "Ok", style: .default),
                                                         AlertActionOption(title: "Try what?", style: .destructive, handler: { _ in
                                                             
-                                                            self.inboxButton.tintColor = UIColor.lightGray
-                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxButton.layer.opacity = 0.3
+                                                            
                                                             self.inboxEvent += 1
                                                                       })]))
         case 2:
@@ -106,7 +106,8 @@ class HomeViewController: UIViewController, Alertable {
                                                         AlertActionOption(title: "Won't press it again", style: .default),
                                                         AlertActionOption(title: "Dare me", style: .destructive, handler: { _ in
                                                             self.inboxButton.tintColor = UIColor.white
-                                                            self.inboxButton.setImage(UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24)), for: .normal)
+                                                            self.inboxButton.setImage(UIImage(named: "whitray"), for: .normal)
+                                                            
                                                             self.inboxEvent += 1
                                                                       })]))
         default:

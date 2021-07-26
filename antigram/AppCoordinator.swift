@@ -96,15 +96,20 @@ class AppCoordinator {
         configVC.coordinator = self
         configVC.title = "Settings"
         
+        
         configVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
         let navVC = UINavigationController()
         navVC.navigationBar.barTintColor = UIColor.white
+        navVC.navigationBar.overrideUserInterfaceStyle = .light
+        
+        
         
         navVC.pushViewController(configVC, animated: false)
         
         tabController.viewControllers = [homeVC, navVC]
         tabController.tabBar.tintColor = .black
         tabController.tabBar.barTintColor = UIColor.white
+        
         return tabController
   }
     

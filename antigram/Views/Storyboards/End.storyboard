@@ -30,8 +30,8 @@
                                     <action selector="didPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VLc-FG-QG4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-5N-sGS">
-                                <rect key="frame" x="30" y="214" width="354" height="406"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchapp" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-5N-sGS">
+                                <rect key="frame" x="130" y="214" width="154" height="406"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-No-0h0">
                                 <rect key="frame" x="20" y="140" width="374" height="50"/>
@@ -68,7 +68,7 @@
                         <constraints>
                             <constraint firstItem="rxn-bP-ML2" firstAttribute="top" secondItem="4WZ-Fh-8Ur" secondAttribute="bottom" constant="72" id="3Qn-PK-1Jh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rxn-bP-ML2" secondAttribute="bottom" constant="20" id="6EN-Tx-P1x"/>
-                            <constraint firstItem="ipJ-5N-sGS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Bey-f7-6ZN"/>
+                            <constraint firstItem="ipJ-5N-sGS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="130" id="Bey-f7-6ZN"/>
                             <constraint firstItem="2lR-No-0h0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="CoZ-xk-CS0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rxn-bP-ML2" secondAttribute="trailing" constant="20" id="DBR-hi-0kM"/>
                             <constraint firstItem="rxn-bP-ML2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="TPk-7P-Fwh"/>
@@ -78,10 +78,11 @@
                             <constraint firstItem="4WZ-Fh-8Ur" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="osy-sA-n94"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2lR-No-0h0" secondAttribute="trailing" constant="20" id="saw-tI-GgX"/>
                             <constraint firstItem="2lR-No-0h0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="96" id="utM-Sz-DFu"/>
-                            <constraint firstAttribute="trailing" secondItem="ipJ-5N-sGS" secondAttribute="trailing" constant="30" id="zOu-hH-h9g"/>
+                            <constraint firstAttribute="trailing" secondItem="ipJ-5N-sGS" secondAttribute="trailing" constant="130" id="zOu-hH-h9g"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="antoiLogo" destination="ipJ-5N-sGS" id="40z-iE-Uy5"/>
                         <outlet property="backgroundView" destination="5EZ-qb-Rvc" id="gaQ-39-Hyh"/>
                         <outlet property="doButtonRounded" destination="rxn-bP-ML2" id="DvM-6v-wL3"/>
                     </connections>
@@ -92,7 +93,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="door" width="820" height="881"/>
+        <image name="launchapp" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

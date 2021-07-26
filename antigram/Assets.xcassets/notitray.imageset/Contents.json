@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 11tray.png",
+      "filename" : "traynot.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "traynot-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "traynot-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
